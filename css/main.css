@@ -528,7 +528,7 @@ footer .copyright {
 
 /* tablet faq */
 
-.faq .content-wrapper {
+.faqs .content-wrapper {
 	justify-content: space-between;
 }
 
@@ -539,13 +539,71 @@ footer .copyright {
 .faq h1 {
 	width: 100%;
 }
-
 }
 
 /* desktop */
 
 @media only screen and (min-width: 1200px) {
-/*desktop styles*/
+
+.content-wrapper {
+	max-width: 960px;
+}
+
+
+/* desktop hero */
+.hero-area h1 {
+	width: 60%;
+}
+
+/* desktop aside */
+
+aside .content-wrapper {
+	justify-content: space-around;
+}
+
+aside .content-wrapper .form-description, 
+aside .content-wrapper .form {
+	width: 30%;
+}
+
+/* desktop features */
+
+.features h2 {
+	width: 90%;
+} 
+
+.features article {
+	flex-basis: 33%;
+}
+
+/* desktop reviews */
+
+.reviews article div {
+	width: 42%;
+}
+
+/* desktop about */
+
+.mission h2,
+.contact-section .content-wrapper h2 {
+	width: 95%;
+}
+
+/*This is not in the solution code
+.contact-section .content-wrapper h2 {
+	margin-bottom: 40px;
+}*/
+
+/* desktop faq */
+
+/* This is not in the solution code 
+.faq-content {
+	flex-basis: 40%;
+}*/
+
+.faq h1 {
+	width: 100%;
+}
 }
 
 
