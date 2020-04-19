@@ -370,6 +370,7 @@ Why is width needed here?
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	background-color: #527158;
 }
 
 .contact-section {
@@ -377,6 +378,7 @@ Why is width needed here?
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	background-color: #2a423a;
 }
 
 .contact-content p {
@@ -390,6 +392,7 @@ Why is width needed here?
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	background-color: #527158;
 }
 
 faqs .content-wrapper {
@@ -400,11 +403,13 @@ faqs .content-wrapper {
 	margin: 50px 0 0 0;
 } 
 
-.faq h1 {
+.faq h2 {
 	margin-bottom: 40px;
 }
 
-/*solution code uses .faq h2*/
+
+/* solution code uses line-height: 1 for faq h2;
+why do we need that if the h2 is 30 and the line-height is 30?*/
 
 
 .faq-content {
@@ -412,6 +417,9 @@ faqs .content-wrapper {
 }
 
 
+.faq-content h4 {
+	line-height: 1.333;
+}
 
 
 /* ==========================================================================
@@ -506,15 +514,27 @@ faqs .content-wrapper {
 /* tablet */
 @media only screen and (min-width: 768px) {
 
+/* general tablet styles */
+
 .content-wrapper {
 	max-width: 640px;
 	margin: 100px 0;
 }
 
+h2 {
+	font-size: 2.25em;
+	line-height: 1.333;
+}
+
+h3 {
+	font-size: 1.5em;
+	line-height: 1.25;
+}
+
 /* tablet header */
 
 header {
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 33px 0;
 }
 
@@ -522,6 +542,13 @@ header .content-wrapper {
 	width: 100%
 	justify-content: space-between;
 }
+
+/* solution code shows following - what figure is it referring to? */
+
+header figure {
+	width: 30%;
+}
+
 
 header nav {
 	width: 20%;
@@ -536,6 +563,12 @@ header nav ul {
 }
 
 /* tablet hero */
+
+.hero-area h1 {
+	font-size: 3em;
+	line-height: 1;
+	margin: 0;
+}
 
 /* tablet aside */
 aside .content-wrapper {
@@ -553,6 +586,10 @@ aside .content-wrapper .form {
 
 /* tablet features */
 
+.features h2 {
+	margin-bottom: 20px;
+}
+
 .features article {
 	display: flex;
 	justify-content: center;
@@ -561,9 +598,12 @@ aside .content-wrapper .form {
 	flex-basis: 50%;
 }
 
+/* solution code is showing width 62% as shown below; how did they figure out that number? */
+
 .features .features-item-description {
-	width: 50%;
+	width: 62%;
 }
+
 
 /* tablet reviews */
 
@@ -572,8 +612,17 @@ aside .content-wrapper .form {
 	justify-content: space-between;
 }
 
+.reviews h2 {
+	width: 85%;
+}
+
 .reviews article div {
 	width: 49%;
+}
+
+.reviews h3 {
+	width: 75%;
+	margin: 0;
 }
 
 /* tablet footer */
@@ -587,10 +636,20 @@ footer .content-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-direction: row;
 }
 
 footer .contact {
 	margin-bottom: 0;
+}
+
+footer h4 {
+	font-size: 1.5em;
+	margin-bottom: 40px;
+}
+
+footer p {
+	line-height: 1.285;
 }
 
 footer .copyright {
@@ -609,7 +668,7 @@ footer .copyright {
 	width: 45%;
 }
 
-.contact-section .content wrapper h1 {
+.contact-section .content wrapper h2 {
 	width: 80%;
 }
 
@@ -619,33 +678,66 @@ footer .copyright {
 	align-items: flex-start;
 }
 
+.contact-content h4 {
+	font-size: 1.5em;
+}
+
 /* tablet faq */
 
 .faqs .content-wrapper {
 	justify-content: space-between;
 }
 
+/* solution code shows flex-basis of 45%; how did they figure out that number? */
+
 .faq-content {
-	flex-basis: 40%;
+	flex-basis: 45%;
 }
 
-.faq h1 {
+.faqs h2 {
 	width: 100%;
 }
+
+.faqs h4,
+.faqs p {
+	font-size: .875em;
+	line-height: 1.125;
+}
+
 }
 
 /* desktop */
 
 @media only screen and (min-width: 1200px) {
 
+/* general desktop styles */
+
 .content-wrapper {
 	max-width: 960px;
+}
+
+header {
+	padding: 15px 0;
+}
+
+h2 {
+	font-size: 2.25em;
+}
+
+h3, h4 {
+	font-size: 1.875em;
+}
+
+p {
+	font-size: 1.125em;
+	line-height: 1.333;
 }
 
 
 /* desktop hero */
 .hero-area h1 {
 	width: 60%;
+	font-size: 3.75em;
 }
 
 /* desktop aside */
@@ -657,6 +749,10 @@ aside .content-wrapper {
 aside .content-wrapper .form-description, 
 aside .content-wrapper .form {
 	width: 30%;
+}
+
+.form-description p {
+	font-size: 1.125em;
 }
 
 /* desktop features */
@@ -671,8 +767,18 @@ aside .content-wrapper .form {
 
 /* desktop reviews */
 
+.reviews h2 {
+	padding-bottom: 50px;
+}
+
+/* when I measure reviews h2 padding-bottom, I get 96? */
+
 .reviews article div {
 	width: 42%;
+}
+
+footer h4 {
+	font-size: 1.875em;
 }
 
 /* desktop about */
@@ -680,6 +786,7 @@ aside .content-wrapper .form {
 .mission h2,
 .contact-section .content-wrapper h2 {
 	width: 95%;
+	font-size: 3em;
 }
 
 /*This is not in the solution code
@@ -687,15 +794,26 @@ aside .content-wrapper .form {
 	margin-bottom: 40px;
 }*/
 
+.contact-content h4 {
+	font-size: 1.875em;
+}
+
 /* desktop faq */
 
-/* This is not in the solution code 
+/* This is not in the solution code but is shown in the lesson
 .faq-content {
 	flex-basis: 40%;
 }*/
 
-.faq h1 {
+.faqs h2 {
 	width: 100%;
+	font-size: 3em;
+}
+
+.faqs h4,
+.faqs p {
+	font-size: 1.125em;
+	line-height: 1;
 }
 }
 
