@@ -144,9 +144,11 @@ p {
 }
 
 img {
+	width: 100%;
 }
 
 figure {
+	margin: 0;
 }
 
 address {
@@ -180,6 +182,14 @@ header .content-wrapper {
 	align-items: center;
 	flex-flow: row wrap;
 	margin: 0;
+}
+
+header figure {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 .header-divider {
@@ -255,7 +265,11 @@ footer .copyright {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
+	background: url('../img/unplugged-retreat-homepage-hero.jpg') center no-repeat #333;
+	background-size: cover;
+	min-height: 500px;
 }
+	
 
 .hero-area h1 {
 	font-size: 2.25em
@@ -309,6 +323,8 @@ input[type=button] {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
+	background: url('../img/features-background.jpg') center no-repeat #333;
+	background-size: cover;
 }
 
 .features h2 {
@@ -354,12 +370,19 @@ input[type=button] {
 	width: 55%;
 }
 
+/*.reviews figure {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-row: row wrap;
+	width: 90%;
+} The solution code doesn't show this - why isn't it needed?*/
 
 /*solution code shows
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
-Why is width needed here?
+Why is width needed here if h3 goes across most of mobile?
 }*/
 
 
@@ -403,7 +426,7 @@ faqs .content-wrapper {
 	margin: 50px 0 0 0;
 } 
 
-.faq h2 {
+.faqs h2 {
 	margin-bottom: 40px;
 }
 
@@ -543,10 +566,8 @@ header .content-wrapper {
 	justify-content: space-between;
 }
 
-/* solution code shows following - what figure is it referring to? */
-
 header figure {
-	width: 30%;
+	width: 28%;
 }
 
 
@@ -568,6 +589,10 @@ header nav ul {
 	font-size: 3em;
 	line-height: 1;
 	margin: 0;
+}
+
+.hero-area {
+	min-height: 600px;
 }
 
 /* tablet aside */
@@ -616,9 +641,12 @@ aside .content-wrapper .form {
 	width: 85%;
 }
 
-.reviews article div {
+.reviews article div,
+.reviews article figure, {
 	width: 49%;
 }
+
+/*In tablet, why are the photo and article squished together if they are space-between?*/
 
 .reviews h3 {
 	width: 75%;
@@ -740,6 +768,12 @@ p {
 	font-size: 3.75em;
 }
 
+.hero-area {
+	min-height: 600px;
+}
+
+/*Why is the solution code showing min-height 775px?*/
+
 /* desktop aside */
 
 aside .content-wrapper {
@@ -772,6 +806,12 @@ aside .content-wrapper .form {
 }
 
 /* when I measure reviews h2 padding-bottom, I get 96? */
+
+.reviews figure {
+	width: 47%;
+}
+
+/*Why isn't a width for .reviews figure shown in the solution code?*/
 
 .reviews article div {
 	width: 42%;
