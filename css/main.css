@@ -330,7 +330,7 @@ input[type=button] {
 }
 
 .features h2 {
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 
 .features article {
@@ -351,6 +351,11 @@ input[type=button] {
 .features p {
 	margin: 0;
 	text-align: center;
+}
+
+.features i {
+	font-size: 3.75em;
+        margin-bottom: 40px;
 }
 
 /* Reviews */
