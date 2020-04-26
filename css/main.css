@@ -337,8 +337,6 @@ input[type=button] {
 	margin: 30px 0;
 }
 
-/*Why is width 63%? When I measured, it was 200px = 55%?*/
-
 
 .features .features-items {
 	display: flex;
@@ -450,11 +448,8 @@ faqs .content-wrapper {
 
 .faqs h2 {
 	margin-bottom: 40px;
+	line-height: 1.2;
 }
-
-
-/* solution code uses line-height: 1 for faq h2;
-why do we need that if the h2 is 30 and the line-height is 30?*/
 
 
 .faq-content {
@@ -709,9 +704,11 @@ footer .copyright {
 .mission-content {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	padding-top: 20px;
 }
+
+/*the solution code shows align-items: center, but that made my paragraph #2 centered*/
 
 .mission-content p {
 	width: 45%;
@@ -880,7 +877,7 @@ footer h4 {
 .faqs h4,
 .faqs p {
 	font-size: 1.125em;
-	line-height: 1;
+	line-height: 1.2;
 }
 }
 
