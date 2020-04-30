@@ -129,6 +129,7 @@ h2 {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.875em;
 	font-weight: 500;
+	margin: 0;
 }
 
 h3,
@@ -282,9 +283,8 @@ footer .copyright {
 	min-height: 500px;
 }
 	
-
 .hero-area h1 {
-	font-size: 2.25em
+	font-size: 2.25em;
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.2;
@@ -384,21 +384,6 @@ input[type=button] {
 	width: 55%;
 }
 
-/*.reviews figure {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-row: row wrap;
-	width: 90%;
-} The solution code doesn't show this - why isn't it needed?*/
-
-/*solution code shows
-.reviews h3 {
-  width: 55%;
-  margin: 20px 0;
-Why is width needed here if h3 goes across most of mobile?
-}*/
-
 
 /*** About page ***/
 
@@ -448,7 +433,7 @@ Why is width needed here if h3 goes across most of mobile?
 	background-color: #527158;
 }
 
-faqs .content-wrapper {
+.faqs .content-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -562,7 +547,7 @@ faqs .content-wrapper {
    ========================================================================== */
 
 /* tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width:768px) {
 
 /* general tablet styles */
 
@@ -650,12 +635,13 @@ aside .content-wrapper .form {
 	flex-basis: 50%;
 }
 
-/* solution code is showing width 62% as shown below; how did they figure out that number? */
-
 .features .features-item-description {
 	width: 62%;
 }
 
+.features i {
+	margin-bottom: 30px;
+}
 
 /* tablet reviews */
 
@@ -723,8 +709,6 @@ footer .copyright {
 	padding-top: 20px;
 }
 
-/*the solution code shows align-items: center, but that made my paragraph #2 vertically centered*/
-
 .mission-content p {
 	width: 45%;
 }
@@ -753,7 +737,6 @@ footer .copyright {
 	justify-content: space-between;
 }
 
-/* solution code shows flex-basis of 45%; how did they figure out that number? */
 
 .faq-content {
 	flex-basis: 45%;
@@ -772,7 +755,7 @@ footer .copyright {
 
 /* desktop */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width:1200px) {
 
 /* general desktop styles */
 
@@ -799,16 +782,17 @@ p {
 
 
 /* desktop hero */
+
 .hero-area h1 {
-	width: 60%;
 	font-size: 3.75em;
+	width: 70%;
 }
 
 .hero-area {
-	min-height: 600px;
+	min-height: 775px;
 }
 
-/*Why is the solution code showing min-height 775px?*/
+/*One of the previous solution codes, but not the master code for Step 8, showed min-height 775px, but when I measured the hero image on desktop it is 600px?*/
 
 /* desktop aside */
 
@@ -841,13 +825,6 @@ aside .content-wrapper .form {
 	padding-bottom: 50px;
 }
 
-/* when I measure reviews h2 padding-bottom, I get 96? */
-
-.reviews figure {
-	width: 47%;
-}
-
-
 .reviews article div {
 	width: 42%;
 }
@@ -868,21 +845,11 @@ footer h4 {
 	font-size: 3em;
 }
 
-/*This is not in the solution code
-.contact-section .content-wrapper h2 {
-	margin-bottom: 40px;
-}*/
-
 .contact-content h4 {
 	font-size: 1.875em;
 }
 
 /* desktop faq */
-
-/* This is not in the solution code but is shown in the lesson
-.faq-content {
-	flex-basis: 40%;
-}*/
 
 .faqs h2 {
 	width: 100%;
