@@ -251,7 +251,17 @@ footer .social-icons p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #527158;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
 }
+
+footer .social-icons p i {
+	font-size: 1.125em;
+}
+
+/*why is the solution code showing 1.3125em for the above font-size?*/
 
 
 footer .copyright {
@@ -676,7 +686,7 @@ footer .content-wrapper {
 	margin: 100px 0;
 }
 
-.footer-content {
+footer .footer-content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -696,6 +706,11 @@ footer p {
 	line-height: 1.285;
 }
 
+footer .social-icons {
+	justify-content: space-between;
+	width: 12.5em;
+}
+
 footer .copyright {
 	width: 100%;
 }
@@ -708,7 +723,7 @@ footer .copyright {
 	padding-top: 20px;
 }
 
-/*the solution code shows align-items: center, but that made my paragraph #2 centered*/
+/*the solution code shows align-items: center, but that made my paragraph #2 vertically centered*/
 
 .mission-content p {
 	width: 45%;
