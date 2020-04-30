@@ -262,8 +262,6 @@ footer .social-icons p i {
 	font-size: 1.125em;
 }
 
-/*why is the solution code showing 1.3125em for the above font-size?*/
-
 
 footer .copyright {
 	margin: 20px 0;
@@ -288,6 +286,7 @@ footer .copyright {
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.2;
+	margin-top: 0;
 }
 
 
@@ -788,11 +787,10 @@ p {
 	width: 70%;
 }
 
-.hero-area {
-	min-height: 775px;
+.hero-area .content-wrapper {
+	margin-top: 50px;
 }
 
-/*One of the previous solution codes, but not the master code for Step 8, showed min-height 775px, but when I measured the hero image on desktop it is 600px?*/
 
 /* desktop aside */
 
